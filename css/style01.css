@@ -1,1 +1,57 @@
 /*Mã nguồn CSS*/
+*{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13pt;
+	line-height:2;
+	/*color:hsl(0, 18%, 91%);*/
+}
+img{
+	width:80%;
+	max-width:200px;
+	vertical-align:middle;
+	border-radius:100%;
+}
+
+div.container{
+	margin:10px 50px 0px 50px;
+	background-color:green;
+	padding:15px;
+}
+table, tr, td{
+	border:1px solid black;
+	/*border-collapse:collapse;*/
+	background-color:LemonChiffon;
+	border-radius:25px;
+	border:none;
+}
+
+td#cot1{
+	text-align:center;
+}
+
+td#cot1, td#cot2{
+	padding:10px;
+}
+.tieude{
+	font-weight:bolder;
+	text-transform:uppercase;
+	color:blue;
+	font-size: 18px;
+}
+ul{
+	background-color:LemonChiffon;
+	list-style-type:none;
+	width:50%;
+	max-width:500px;
+	border-radius:25px;
+}
+
+ul li{
+	padding:10px;
+}
+
+ul li:hover{
+	background-color:Orange;
+}
