@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "vi">
+	<head>
+		<title>Tính diện tích hình chữ nhật</title>
+		<meta charset = "utf-8">
+		<!--<link rel = "stylesheet" href = "../css/style01.css">-->
+	</head>
+	<body>
+		<!--Tạo cấu trúc bảng Hóa đơn mua hàng-->
+		<table>
+            <tr>
+                <th>STT</th>
+                <th>Tên hàng</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Đvt</th>
+                <th>Thành tiền</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class = "tenhang">Sữa chua</td>
+                <td class = "soluong">300</td>
+                <td class = "dongia">240000</td>
+                <td >thùng</td>
+                <td class = "thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class = "tenhang">Mì Colusa</td>
+                <td class = "soluong">100</td>
+                <td class = "dongia">98000</td>
+                <td >thùng</td>
+                <td class = "thanhtien">?</td>
+            </tr>
+            <tr>
+                <td colspan = "5">Tổng thanh toán</td>
+                <td id = "tongthanhtoan">?</td>
+            </tr>
+        </table>
+        <script>
+            //Truy xuất đối tượng số lượng, đơn giá, thành tiền
+            const sl = document.getElementsByClassName("soluong");
+            const dg = document.getElementsByClassName("dongia");
+            const tt = document.getElementsByClassName("thanhtien");
+
+            //Khởi tạo biến tính tổng thanh toán
+            let tongthanhtoan = 0;
+
+            //Duyet mang
+            for(let i = 0; i<sl.length; i++)
+            {
+                tt[i].innerHTML =  Number(sl[i].innerHTML) * Number(dg[i].innerHTML);
+                tongthanhtoan += Number(tt[i].innerHTML);
+            }
+            //Cập nhật giá trị vào phần tử có id = "tongthanhtoan"
+            document.getElementById("tongthanhtoan").innerHTML = tongthanhtoan;
+
+        </script>
+	</body>
+</htmls
