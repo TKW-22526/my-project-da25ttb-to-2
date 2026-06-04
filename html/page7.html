@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "vi">
+	<head>
+		<title>In bảng cửu chương</title>
+		<meta charset = "utf-8">
+		
+	</head>
+	<body>
+		<div class = "container">
+			<h2>In bảng cửu chương</h2>
+			<form id = "frmBCC">
+                <label>
+                    Nhập vào 1 số từ 1 đến 10: 
+                </label>
+                <input type = "number" name = "txtSo" id = "txtSo" value = "2">
+                <input type = "button" value = "In bảng cửu chương" onclick = "inBCC(forms[0]['txtSo'].value)">
+            </form>
+            <div id = "result">
+                Chỗ này sẽ hiện bảng cửu chương tương ứng
+            </div>
+		</div>
+        <script src = "../js/lib.js"></script>
+        <!--
+            Truy xuất giá trị của một control trong form có thể sử dụng các cách sau:
+            document.getElementById('txtSo').value
+            HOẶC: sử dụng thông qua đối tượng forms
+            Ví dụ:
+            forms[0]['txtSo'].value 
+            forms['frmBCC']['txtSo'].value 
+            forms['frmBCC'][0].value
+            forms[0][0].value
+        -->
+	</body>
+</html
