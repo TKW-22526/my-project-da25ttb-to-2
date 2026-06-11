@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "vi">
+	<head>
+		<title>Thiết kế form đăng nhập</title>
+		<meta charset = "utf-8">
+		<link href = "../css/style02.css" rel = "stylesheet">
+        <script src = "../js/lib.js"></script>
+	</head>
+	<body>
+		<div class = "container">
+			<p id = "name">Tên sản phẩm</p>
+
+            <p id = "desc">Mô tả</p>
+			
+		</div>
+        <script>
+            // 2. Khởi tạo đối tượng URLSearchParams
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // 3. Lấy giá trị của từng tham số bằng hàm .get()
+            const productId = urlParams.get('ma');     // Kết quả: "3"
+
+            // 4. Tìm sản phẩm trùng ID trong mảng products (Mảng 10 bông hoa đã tạo trước đó)
+            const foundProduct = products.find(item => item.id === productId);
+            if (foundProduct) {
+                document.getElementById("name").innerHTML = foundProduct.name;
+               // document.getElementById("price").innerText = foundProduct.price.toLocaleString() + " đ";
+                //document.getElementById("img").src = foundProduct.image;
+                document.getElementById("desc").innerHTML = foundProduct.description;
+
+            } 
+            
+        </script>
+	</body>
+</html
